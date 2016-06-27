@@ -17,7 +17,12 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 
+api_urlpatterns = [
+    url('', include('chat.urls')),
+    url('', include('collaborate_editor.urls'))
+]
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', include('collaborate_editor.urls'))
+    url(r'^api/', include(api_urlpatterns))
 ]
