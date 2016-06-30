@@ -13,12 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from __future__ import unicode_literals
+
 from django.conf.urls import include, url
 from django.contrib import admin
 
-
 api_urlpatterns = [
-    url('', include('chat.urls')),
     url('', include('collaborate_editor.urls'))
 ]
 
